@@ -9,75 +9,52 @@
 			
 			function jumlah()
 			{
-				var bil1 = parseFloat(document.form.bilangan1.value);
-				if (isNAN (bil1))
-					bil1=0.0;
-				var bil2 = parseFloat(document.form.bilangan2.value);
-				if (isNAN (bil2))
-					bil2=0.0;
-				var bil3 = parseFloat(document.form.bilangan3.value);
-				if (isNAN (bil3))
-					bil3=0.0;
+				var bil1 = eval(document.getElementById('a').value) 
+				var bil2 = eval(document.getElementById('b').value)
+				var bil3 = eval(document.getElementById('c').value)
 				var hasil = bil1 + bil2 + bil3;
-				document.form.hhasil.value = hasil;
+				document.getElementById('hhasil').value = hasil;
 			}
 		</script>
 		<script language="javascript">
 			function kurang()
 			{
-				var bil1 = parseFloat(document.form.bilangan1.value);
-				if (isNAN (bil1))
-					bil1=0.0;
-				var bil2 = parseFloat(document.form.bilangan2.value);
-				if (isNAN (bil2))
-					bil2=0.0;
-				var bil3 = parseFloat(document.form.bilangan3.value);
-				if (isNAN (bil3))
-					bil3=0.0;
+				var bil1 = eval(document.getElementById('a').value)
+				var bil2 = eval(document.getElementById('b').value)
+				var bil3 = eval(document.getElementById('c').value)
 				var hasil = bil1 - bil2 - bil3;
-				document.form.hhasil.value = hasil;
+				document.getElementById('hhasil').value = hasil;
 			}
 		</script>
 		<script language="javascript">
 			function bagi()
 			{
-				var bil1 = parseFloat(document.form.bilangan1.value);
-				if (isNAN (bil1))
-					bil1=0.0;
-				var bil2 = parseFloat(document.form.bilangan2.value);
-				if (isNAN (bil2))
-					bil2=0.0;
-				var bil3 = parseFloat(document.form.bilangan3.value);
-				if (isNAN (bil3))
-					bil3=0.0;
+				var bil1 = eval(document.getElementById('a').value)
+				var bil2 = eval(document.getElementById('b').value)
+				var bil3 = eval(document.getElementById('c').value)
 				var hasil = bil1 / bil2 / bil3;
-				document.form.hhasil.value = hasil;
+				document.getElementById('hhasil').value = hasil;
 			}
 		</script>
 		<script language="javascript">
 			function kali()
 			{
-				var bil1 = parseFloat(document.form.bilangan1.value);
-				if (isNAN (bil1))
-					bil1=0.0;
-				var bil2 = parseFloat(document.form.bilangan2.value);
-				if (isNAN (bil2))
-					bil2=0.0;
-				var bil3 = parseFloat(document.form.bilangan3.value);
-				if (isNAN (bil3))
-					bil3=0.0;
-				var hasil = bil1 * bil2 * bil3 *;
-				document.form.hhasil.value = hasil;
+				var bil1 = eval(document.getElementById('a').value)
+				var bil2 = eval(document.getElementById('b').value)
+				var bil3 = eval(document.getElementById('c').value)
+				var hasil = bil1 * bil2 * bil3;
+				document.getElementById('hhasil').value = hasil;
 			}
 		</script>
 	</p>
-	<pre>
+		
+		<form>
 		<center>
-			<input type="text" name="bilangan1" size="15"><br><input type="checkbox" name="bilangan1">
-			<input type="text" name="bilangan2" size="15"><br><input type="checkbox" name="bilangan2">
-			<input type="text" name="bilangan3" size="15"><br><input type="checkbox" name="bilangan3">	
+		<br><br><br><input type="text" id="a" name="bilangan1" size="15"><!-- <br><input name="bilangan1"> -->
+		<br><br><input type="text" id="b" name="bilangan2" size="15"><!-- <br><input name="bilangan2"> -->
+		<br><br><input type="text" id="c" name="bilangan3" size="15"><!-- <br><input name="bilangan3"> -->	
 		</center>
-	</pre>
+		</form>
 	<br>
 	<center>
 			<input type="button" value="+" onclick="jumlah()">
@@ -87,7 +64,9 @@
 			<font face="Curlz MT" color="aqua">
 				<h2>Hasil</h2>
 			</font>
-			Hasil :<input type="text" name="hhasil" size="15">
+			
+			Hasil :<br>
+			<input type="text" id="hhasil" name="hhasil" size="15">
 	</center>
 </body>
 </html>
